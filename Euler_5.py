@@ -6,6 +6,8 @@ smallestPostiveNumber=math.factorial(20)
 #well it has cofactors since 20 is divisible by 2??
 
 #LCM between 2 and 20 then? whats that for a range??
+#LCM(a,b,c...)=LCM(LCM(a,b),c),d),e),f),????????????????
+#not a mathematician aint doing that
 
 #ok brute approach
 def getSmallestPositiveNumber(n):
@@ -25,5 +27,4 @@ def getSmallestPositiveNumber(n):
         i=i+1
 
 answer=getSmallestPositiveNumber(20)
-
-#takes 5 minutes to run, probably a method using least common multiple of 1 to 20
+#takes 10 minutes to run

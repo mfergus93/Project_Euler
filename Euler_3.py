@@ -4,12 +4,13 @@
 
 def primes(n):
     
-    for i in range(n):
+    prime_list=[]
+    for i in range(1,n):
         if n % i == 0:
             divisor=i
             
             prime_flag=1
-            for j in range(divisor):
+            for j in range(2,divisor):
                 
                 if j == 1:
                     continue
@@ -19,4 +20,9 @@ def primes(n):
             
             if prime_flag == 1:
                 prime_list.append([divisor])
-                
+    return prime_list
+
+#test=primes(68)
+
+#This takes forever
+answer=primes(600851475143)

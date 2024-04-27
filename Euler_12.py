@@ -1,5 +1,6 @@
 #What is the value of the first triangle number to have over five hundred divisors?
 
+#so this is pretty brute force, perhaps theres a better way
 def triangle_number_divisor_count(n):
 
     c=1

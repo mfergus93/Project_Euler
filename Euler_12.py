@@ -1,21 +1,21 @@
 #What is the value of the first triangle number to have over five hundred divisors?
 
-def triangle_number_divisor_count():
+def triangle_number_divisor_count(n):
 
     c=1
-    factors=1
-    while c==1:
-        divisor_count=0
-        
-        triangleNumber=0
-        for i in range(1,factors+1):
-            triangleNumber+=i
+    i=1
+    triangleNumber=0
     
-        for i in range(1,triangleNumber):
-            if triangleNumber % i ==0:
+    while c==1:
+        
+        divisor_count=0
+        triangleNumber+=i
+        for j in range(1,triangleNumber+1):
+            if triangleNumber % j == 0:
                 divisor_count+=1
-        if divisor_count==500:
+        if divisor_count>=n:
+            c=0
             return triangleNumber
-        factors+=factors
+        i+=1
 
-answer=triangle_number_divisor_count()
+answer=triangle_number_divisor_count(500)

@@ -1,7 +1,21 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 26 18:18:29 2024
+# Function to check if a number is prime
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+    # for i in range(2, int(num)):
 
-@author: Matt
-"""
+        if num % i == 0:
+            return False
+    return True
 
+num=0
+c=0
+while c!= 10001:
+    
+    num+=1
+    primeFlag=is_prime(num)
+    
+    if primeFlag==True:
+        c+=1
